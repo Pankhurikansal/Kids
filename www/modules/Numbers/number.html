@@ -1,0 +1,18 @@
+<ion-view title="Numbers">
+<ion-nav-bar class="bar-assertive">
+  <ion-nav-buttons side="left">
+    <button class="button button-clear icon ion-ios-arrow-left" ng-click="gohome()"></button>
+  </ion-nav-buttons>
+</ion-nav-bar>  
+<ion-content>
+ <div ng-hide="numbers" ng-repeat="number in numbers">
+         <div ng-bind="testname(number)"></div>
+        </div>
+		<div class="row">
+		<div class = "row row-50">
+		<img src="img/numbers/{{num}}.png" class="alphaimg"/>
+		</div>
+		</div>
+            <p class="alphafont">{{num}}</p>
+</ion-content>
+</ion-view>

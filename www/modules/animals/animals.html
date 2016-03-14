@@ -1,0 +1,14 @@
+<ion-view view-title="Animals">
+  <ion-content>
+	 <ion-slide-box> 
+    <ion-slide ng-repeat="data in animals">
+            <div class="row row-50"> 
+				 <img src={{data.imgscr}} class="alphaimg"> 
+				</img> 
+				</div> 
+			<p class="alphafont">{{data.name}}</p> 
+	 </ion-slide>
+   </ion-slide-box>  
+   
+  </ion-content>
+</ion-view>
