@@ -35,7 +35,7 @@ kids.controller('MainCtrl', function($scope, $stateParams,$ionicSlideBoxDelegate
          "imgscr": "img/alpha/G-Girafee.png"
     },
 	 {
-        "name": "Parrot`",
+        "name": "Parrot",
          "imgscr": "img/alpha/P-Parrot.png"
     },
 	 {
@@ -186,6 +186,16 @@ $scope.colours =[
     },
 	
 ];
+$scope.nextSlide = function() {
+    $ionicSlideBoxDelegate.next();
+  }
+  $scope.index=function(){
+	  $ionicSlideBoxDelegate.currentIndex();
+	  console.log($scope.index);
+  }
+  $scope.previousSlide = function() {
+    $ionicSlideBoxDelegate.previous();
+  }
 
 })
 .controller('AlphaCtrl', function ($scope,$window,$timeout) {

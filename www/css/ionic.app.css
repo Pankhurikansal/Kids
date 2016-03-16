@@ -9750,17 +9750,11 @@ a.button {
   height: 300px !important; }
 
 .imghome {
-  padding: 0px;
-  margin-left: 0px;
-  padding-left: 0px;
   margin-top: 45px;
   height: 146px !important; }
 
 .imghome2 {
   height: 145px !important;
-  padding: 0px;
-  margin-left: 0px;
-  padding-left: 0px;
   margin-top: 25px; }
 
 .button {
@@ -9781,8 +9775,27 @@ a.button {
   text-align: center;
   padding-top: 80px;
   color: red;
-  font-weight: bolder; }
+  font-weight: bolder;
+  padding-left: 120px; }
 
 .alphaimg {
   padding-left: 70px;
   padding-top: 10px; }
+
+.butfont {
+  font-size: 20px !important;
+  font-weight: bolder !important;
+  padding-left: 0px;
+  padding-top: 0px; }
+
+.butfont1 {
+  font-size: 20px !important;
+  font-weight: bolder !important;
+  padding-left: 50px;
+  padding-top: 0px; }
+
+.butfont2 {
+  font-size: 20px !important;
+  font-weight: bolder !important;
+  padding-left: 0px;
+  padding-top: 0px; }

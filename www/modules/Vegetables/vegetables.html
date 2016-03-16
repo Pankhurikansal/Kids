@@ -1,14 +1,33 @@
 <ion-view view-title="Vegetables">
   <ion-content>
-	<ion-slide-box>
+	<ion-slide-box show-pager="false">
     <ion-slide ng-repeat="data in vegetables">
                  <div class="row row-50"> 
 				<img src={{data.imgscr}}>
 				</img>
 				</div>
+				 <div class="row row-50"> 
 				 <p class="alphafont">{{data.name}}</p>
+				 </div>
     </ion-slide>
    </ion-slide-box> 
+    <ion-footer-bar align-title="left" class="bar-assertive">
+   <div class="buttons">
+    <button class="button" ng-click="previousSlide()">
+	Previous
+	</button>
+	</div>
+	<div class="buttons" ng-click="">
+    <button class="button">
+	Play
+	</button>
+  </div>
+  <div class="buttons" ng-click="nextSlide()">
+    <button class="button">
+	Next
+	</button>
+  </div>
+  </ion-footer-bar>
   </ion-content>
 </ion-view>
 </ion-view>

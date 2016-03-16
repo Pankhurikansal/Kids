@@ -1,14 +1,32 @@
 <ion-view view-title="Animals">
   <ion-content>
-	 <ion-slide-box> 
+	 <ion-slide-box show-pager="false"> 
     <ion-slide ng-repeat="data in animals">
             <div class="row row-50"> 
 				 <img src={{data.imgscr}} class="alphaimg"> 
 				</img> 
 				</div> 
+				<div class="row row-50">
 			<p class="alphafont">{{data.name}}</p> 
+			</div>
 	 </ion-slide>
    </ion-slide-box>  
-   
+   <ion-footer-bar align-title="left" class="bar-assertive">
+  <div class="buttons">
+    <button class="button butfont" ng-click="previousSlide()">
+	Previous
+	</button>
+	</div>
+	<div class="buttons " >
+    <button class="button butfont1" ng-click="">
+	Play
+	</button>
+  </div>
+  <div class="buttons butfont2" >
+    <button class="button butfont2" ng-click="nextSlide()">
+	Next
+	</button>
+  </div>
+</ion-footer-bar>
   </ion-content>
 </ion-view>
