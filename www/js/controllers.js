@@ -35,7 +35,7 @@ kids.controller('MainCtrl', function($scope, $stateParams,$ionicSlideBoxDelegate
          "imgscr": "img/alpha/G-Girafee.png"
     },
 	 {
-        "name": "Parrot`",
+        "name": "Parrot",
          "imgscr": "img/alpha/P-Parrot.png"
     },
 	 {
@@ -66,8 +66,8 @@ $scope.fruits=[
         "imgscr": "img/fruits/grapes.png"
     },
 	 {
-        "name": "WaterMelon",
-        "imgscr": "img/fruits/watermelon.png"
+        "name": "Guava",
+        "imgscr": "img/fruits/guava.png"
     },
 	 {
         "name": "Orange",
@@ -143,7 +143,7 @@ $scope.vegetables =[
     },
 	 { 
         "name": "Legs",
-        "imgscr": "img/bodyparts/leg.png"
+        "imgscr": "img/bodyparts/legs.png"
     },
 ]; 
 
@@ -186,6 +186,12 @@ $scope.colours =[
     },
 	
 ];
+$scope.next=function(){
+	$ionicSlideBoxDelegate.next();
+}
+$scope.previous=function(){
+	$ionicSlideBoxDelegate.previous();
+}
 
 })
 .controller('AlphaCtrl', function ($scope,$window,$timeout) {

@@ -9750,17 +9750,11 @@ a.button {
   height: 300px !important; }
 
 .imghome {
-  padding: 0px;
-  margin-left: 0px;
-  padding-left: 0px;
   margin-top: 45px;
   height: 146px !important; }
 
 .imghome2 {
   height: 145px !important;
-  padding: 0px;
-  margin-left: 0px;
-  padding-left: 0px;
   margin-top: 25px; }
 
 .button {
@@ -9777,12 +9771,24 @@ a.button {
 
 .alphafont {
   margin: 0 0 10px;
-  font-size: 40px;
+  font-size: 45px;
   text-align: center;
   padding-top: 80px;
   color: red;
-  font-weight: bolder; }
+  font-weight: bolder;
+  padding-left: 120px; }
 
 .alphaimg {
   padding-left: 70px;
   padding-top: 10px; }
+
+.butcol {
+  font-size: 20px !important;
+  font-weight: bolder !important;
+  padding-left: 0px !important;
+  text-align: left; }
+
+.butcol1 {
+  font-size: 20px !important;
+  font-weight: bolder !important;
+  padding-left: 200px !important; }
