@@ -66,8 +66,8 @@ $scope.fruits=[
         "imgscr": "img/fruits/grapes.png"
     },
 	 {
-        "name": "WaterMelon",
-        "imgscr": "img/fruits/watermelon.png"
+        "name": "Guava",
+        "imgscr": "img/fruits/guava.png"
     },
 	 {
         "name": "Orange",
@@ -143,7 +143,7 @@ $scope.vegetables =[
     },
 	 { 
         "name": "Legs",
-        "imgscr": "img/bodyparts/leg.png"
+        "imgscr": "img/bodyparts/legs.png"
     },
 ]; 
 
@@ -186,16 +186,14 @@ $scope.colours =[
     },
 	
 ];
-$scope.nextSlide = function() {
-    $ionicSlideBoxDelegate.next();
-  }
-  $scope.index=function(){
-	  $ionicSlideBoxDelegate.currentIndex();
-	  console.log($scope.index);
-  }
-  $scope.previousSlide = function() {
-    $ionicSlideBoxDelegate.previous();
-  }
+
+$scope.next=function(){
+	$ionicSlideBoxDelegate.next();
+}
+$scope.previous=function(){
+	$ionicSlideBoxDelegate.previous();
+}
+
 
 })
 .controller('AlphaCtrl', function ($scope,$window,$timeout) {

@@ -9771,7 +9771,7 @@ a.button {
 
 .alphafont {
   margin: 0 0 10px;
-  font-size: 40px;
+  font-size: 45px;
   text-align: center;
   padding-top: 80px;
   color: red;
@@ -9782,6 +9782,7 @@ a.button {
   padding-left: 70px;
   padding-top: 10px; }
 
+<<<<<<< HEAD
 .butfont {
   font-size: 20px !important;
   font-weight: bolder !important;
@@ -9799,3 +9800,15 @@ a.button {
   font-weight: bolder !important;
   padding-left: 0px;
   padding-top: 0px; }
+=======
+.butcol {
+  font-size: 20px !important;
+  font-weight: bolder !important;
+  padding-left: 0px !important;
+  text-align: left; }
+
+.butcol1 {
+  font-size: 20px !important;
+  font-weight: bolder !important;
+  padding-left: 200px !important; }
+>>>>>>> 1ef7a4f8b4d6469ce8aa6d2001b064173e6dcfae
