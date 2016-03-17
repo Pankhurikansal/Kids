@@ -9782,25 +9782,6 @@ a.button {
   padding-left: 70px;
   padding-top: 10px; }
 
-<<<<<<< HEAD
-.butfont {
-  font-size: 20px !important;
-  font-weight: bolder !important;
-  padding-left: 0px;
-  padding-top: 0px; }
-
-.butfont1 {
-  font-size: 20px !important;
-  font-weight: bolder !important;
-  padding-left: 50px;
-  padding-top: 0px; }
-
-.butfont2 {
-  font-size: 20px !important;
-  font-weight: bolder !important;
-  padding-left: 0px;
-  padding-top: 0px; }
-=======
 .butcol {
   font-size: 20px !important;
   font-weight: bolder !important;
@@ -9810,5 +9791,8 @@ a.button {
 .butcol1 {
   font-size: 20px !important;
   font-weight: bolder !important;
-  padding-left: 200px !important; }
->>>>>>> 1ef7a4f8b4d6469ce8aa6d2001b064173e6dcfae
+  padding-left: 80px !important; }
+
+.butcol2 {
+  font-size: 20px !important;
+  font-weight: bolder !important; }

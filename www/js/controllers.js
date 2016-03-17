@@ -1,5 +1,6 @@
 
 kids.controller('MainCtrl', function($scope, $stateParams,$ionicSlideBoxDelegate) {
+	$scope.myActiveSlide = 0;
 	$scope.animals =[
     { 
         "name": "Dog",
@@ -63,11 +64,11 @@ $scope.fruits=[
     },
 	 {
         "name": "Grapes",
-        "imgscr": "img/fruits/grapes.png"
+        "imgscr": "img/fruits/Grapes.png"
     },
 	 {
         "name": "Guava",
-        "imgscr": "img/fruits/guava.png"
+        "imgscr": "img/fruits/Guava.png"
     },
 	 {
         "name": "Orange",
@@ -75,15 +76,15 @@ $scope.fruits=[
     },
 	 {
         "name": "Pear",
-        "imgscr": "img/fruits/pear.png"
+        "imgscr": "img/fruits/Pear.png"
     },
 	{
         "name": "Litchi",
-        "imgscr": "img/fruits/litchi.png"
+        "imgscr": "img/fruits/Litchi.png"
     },
 	{
         "name": "Papaya",
-        "imgscr": "img/fruits/papaya.png"
+        "imgscr": "img/fruits/Papaya.png"
     },
 	
 ];
@@ -107,11 +108,11 @@ $scope.vegetables =[
     },
 	{
         "name": "Radish",
-         "imgscr": "img/vegetables/radish.png"
+         "imgscr": "img/vegetables/Radish.png"
     },
 	{
         "name": "Carrot",
-         "imgscr": "img/vegetables/carrot.png"
+         "imgscr": "img/vegetables/c]Carrot.png"
     },
 	{
         "name": "Brinjal",
@@ -150,11 +151,11 @@ $scope.vegetables =[
 $scope.colours =[
     { 
         "name": "Red",
-        "imgscr": "img/Colours/red.png"
+        "imgscr": "img/Colours/Red.png"
     },
     {
         "name": "Yellow",
-         "imgscr": "img/Colours/yellow.png"
+         "imgscr": "img/Colours/Yellow.png"
     },
     {
         "name": "Green",
@@ -162,19 +163,19 @@ $scope.colours =[
     },
     {
         "name": "Blue",
-         "imgscr": "img/colours/blue.png"
+         "imgscr": "img/Colours/Blue.png"
     },
 	 {
         "name": "Pink",
-         "imgscr": "img/Colours/pink.png"
+         "imgscr": "img/Colours/Pink.png"
     },
 	 {
         "name": "Purple",
-         "imgscr": "img/colours/purple.png"
+         "imgscr": "img/Colours/Purple.png"
     },
 	 {
         "name": "Orange",
-         "imgscr": "img/Colours/orange.png"
+         "imgscr": "img/Colours/Orange.png"
     },
 	 {
         "name": "Brown",
@@ -182,7 +183,7 @@ $scope.colours =[
     },
 	 {
         "name": "Black",
-         "imgscr": "img/Colours/black.png"
+         "imgscr": "img/Colours/Black.png"
     },
 	
 ];
@@ -193,7 +194,47 @@ $scope.next=function(){
 $scope.previous=function(){
 	$ionicSlideBoxDelegate.previous();
 }
-
+$scope.index=function()
+{
+	$ionicSlideBoxDelegate.currentIndex();
+}
+/* $scope.play = function(src) {
+        var media = new Media(src, null, null, mediaStatusCallback);
+        $cordovaMedia.play(media);
+    }
+ 
+    var mediaStatusCallback = function(status) {
+        if(status == 1) {
+            $ionicLoading.show({template: 'Loading...'});
+        } else {
+            $ionicLoading.hide();
+        }
+    } */
+	$scope.slideHasChanged = function($index ,$event,$ionicScrollDelegate){
+    alert($index);
+   console.log($ionicScrollDelegate);
+   //console.log($ionicScrollDelegate.$scope.colours.$element.innerText);
+   console.log($ionicScrollDelegate.colours[0].$name.innerText)
+  };
+ $scope.speakText = function() {
+	 for(i=0;i<$scope.colours.length;i++)
+	 {
+		 alert($scope.colours.length);
+		 var obj= $scope.colours[i];
+		 alert(obj.name);
+    TTS.speak({
+           text:obj.name,
+           locale: 'en-GB',
+           rate: 1.5
+       }, function () {
+           // Do Something after success
+		   alert('sucess');
+       }, function (reason) {
+           // Handle the error case
+		   alert('reason')
+       });
+  }
+ };
 
 })
 .controller('AlphaCtrl', function ($scope,$window,$timeout) {

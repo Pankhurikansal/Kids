@@ -1,41 +1,25 @@
 <ion-view view-title="Colours">
   <ion-content>
-	<ion-slide-box show-pager="false">
+	<ion-slide-box show-pager="false"  on-slide-changed="slideHasChanged($index,$event)">
     <ion-slide ng-repeat="data in colours">
                 <div class="row row-50"> 
 				<img src={{data.imgscr}}>
 				</img>
 				</div>
 				<div class="row row-50">
-				<p class="alphafont">{{data.name}}</p>
+				<p class="alphafont" ng-model="demo.speechText" >{{data.name}}</p>
 				</div>
-				
-    </ion-slide>
+	</ion-slide>
    </ion-slide-box> 
-    <ion-footer-bar align-title="left" class="bar-assertive">
-   <div class="buttons">
-    <button class="button" ng-click="previousSlide()">
-	Previous
-	</button>
-	</div>
-	<div class="buttons" ng-click="">
-    <button class="button">
-	Play
-	</button>
-  </div>
-  <div class="buttons" ng-click="nextSlide()">
-    <button class="button">
-	Next
-	</button>
-  </div>
-  </ion-footer-bar>
-  </ion-content>
-  <ion-footer-bar align-title="left" class="bar-assertive">
+     </ion-content>
+  <ion-footer-bar  class="bar-assertive">
   <div class="buttons">
     <button class="button butcol" ng-click="previous()">Previous</button>
   </div>
- 
-  <div class="buttons" >
+  <div class="buttons">
+    <button class="button butcol1" ng-click="speakText()">Play</button>
+  </div>
+  <div class="buttons">
     <button class="button butcol1" ng-click="next()">Next</button>
   </div>
 </ion-view>
