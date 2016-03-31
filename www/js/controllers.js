@@ -1,5 +1,5 @@
 
-kids.controller('MainCtrl', function($scope, $stateParams,$ionicSlideBoxDelegate) {
+kids.controller('MainCtrl', function($scope, $stateParams,$ionicSlideBoxDelegate,$cordovaMedia, $ionicLoading) {
 	$scope.myActiveSlide = 0;
 	$scope.animals =[
     { 
@@ -198,25 +198,38 @@ $scope.index=function()
 {
 	$ionicSlideBoxDelegate.currentIndex();
 }
-/* $scope.play = function(src) {
-        var media = new Media(src, null, null, mediaStatusCallback);
-        $cordovaMedia.play(media);
-    }
- 
-    var mediaStatusCallback = function(status) {
-        if(status == 1) {
-            $ionicLoading.show({template: 'Loading...'});
-        } else {
-            $ionicLoading.hide();
+$scope.play=function(url){
+		alert(url)
+		var my_media = new Media(url,
+        // success callback
+        function () {
+            console.log("playAudio():Audio Success");
+			alert("success");
+        },
+        // error callback
+        function (err) {
+            console.log("playAudio():Audio Error: " + err);
+			alert("err")
         }
-    } */
+    );
+    // Play audio
+        my_media.play();
+	}
 	$scope.slideHasChanged = function($index ,$event,$ionicScrollDelegate){
-    alert($index);
+    //alert($index);
    console.log($ionicScrollDelegate);
-   //console.log($ionicScrollDelegate.$scope.colours.$element.innerText);
-   console.log($ionicScrollDelegate.colours[0].$name.innerText)
   };
- $scope.speakText = function() {
+  $scope.onTouch = function(src) {
+    // Do something on touch
+	alert(src);
+	 for(i=0;i<$scope.colours.length;i++)
+	 {
+		 alert($scope.colours.length);
+		 //var obj= $scope.colours[i];
+		 alert($scope.colours[i].name);
+	 }
+}
+ /* $scope.speakText = function() {
 	 for(i=0;i<$scope.colours.length;i++)
 	 {
 		 alert($scope.colours.length);
@@ -235,7 +248,7 @@ $scope.index=function()
        });
   }
  };
-
+ */
 })
 .controller('AlphaCtrl', function ($scope,$window,$timeout) {
   $scope.letters = ['A-Apple', 'B-Ball', 'C-Cat', 
