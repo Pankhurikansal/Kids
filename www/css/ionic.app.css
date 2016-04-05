@@ -9789,10 +9789,13 @@ a.button {
   text-align: left; }
 
 .butcol1 {
-  font-size: 20px !important;
+  font-size: 30px !important;
   font-weight: bolder !important;
-  padding-left: 80px !important; }
+  padding-left: 100px !important; }
 
 .butcol2 {
   font-size: 20px !important;
   font-weight: bolder !important; }
+
+.widclas {
+  padding-left: 30px; }

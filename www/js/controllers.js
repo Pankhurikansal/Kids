@@ -219,36 +219,16 @@ $scope.play=function(url){
     //alert($index);
    console.log($ionicScrollDelegate);
   };
-  $scope.onTouch = function(src) {
-    // Do something on touch
-	alert(src);
-	 for(i=0;i<$scope.colours.length;i++)
-	 {
-		 alert($scope.colours.length);
-		 //var obj= $scope.colours[i];
-		 alert($scope.colours[i].name);
-	 }
+  $scope.callname=function(name){
+ //alert(name)
+   TTS.speak( name, function () {
+            //alert('success');
+        }, function (reason) {
+            //alert(reason);
+        });
+ 
 }
- /* $scope.speakText = function() {
-	 for(i=0;i<$scope.colours.length;i++)
-	 {
-		 alert($scope.colours.length);
-		 var obj= $scope.colours[i];
-		 alert(obj.name);
-    TTS.speak({
-           text:obj.name,
-           locale: 'en-GB',
-           rate: 1.5
-       }, function () {
-           // Do Something after success
-		   alert('sucess');
-       }, function (reason) {
-           // Handle the error case
-		   alert('reason')
-       });
-  }
- };
- */
+ 
 })
 .controller('AlphaCtrl', function ($scope,$window,$timeout) {
   $scope.letters = ['A-Apple', 'B-Ball', 'C-Cat', 

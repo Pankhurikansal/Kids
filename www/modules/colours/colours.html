@@ -2,7 +2,7 @@
   <ion-content >
 	<ion-slide-box show-pager="false"  on-slide-changed="slideHasChanged($index,$event)">
     <ion-slide ng-repeat="data in colours">
-                <div class="row row-50" on-touch="onTouch({{data.name}})"> 
+                <div class="row row-50" ng-click='callname(data.name)'> 
 				<img src={{data.imgscr}}>
 				</img>
 				</div>
@@ -14,12 +14,9 @@
      </ion-content>
   <ion-footer-bar  class="bar-assertive">
   <div class="buttons">
-    <button class="button butcol" ng-click="previous()">Previous</button>
+    <button class="button butcol1 ion-play" ng-click="play('/android_asset/www/Colours.mp3')"></button>
   </div>
   <div class="buttons">
-    <button class="button butcol1" ng-click="play('/android_asset/www/Colours.mp3')">Play</button>
-  </div>
-  <div class="buttons">
-    <button class="button butcol1" ng-click="next()">Next</button>
+    <button class="button butcol1 ion-stop" ng-click="stop()"></button>
   </div>
 </ion-view>
